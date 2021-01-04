@@ -1,5 +1,5 @@
 .header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 228, 106, 0.945);
     border-bottom: 1px solid #e9ecef;
 
     > .container {
@@ -8,17 +8,23 @@
         padding: 6px;
     }
 }
+.pagetitle {
+    font-size: 250%;
+    font-family: Noto Sans, sans-serif;
+    font-weight: bold
+}
 
 .logo-link {
     display: flex;
     align-items: center;
 
     img.logo {
-        max-height: 50px;
+        max-height: 100px;
     }
 
     &:link, &:visited {
-        color: #0e95c7;
+        color: #0fb1ecf6;
         font-size: 22px;
     }
 }
+
