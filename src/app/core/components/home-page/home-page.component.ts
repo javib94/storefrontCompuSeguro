@@ -14,7 +14,7 @@ import { DataService } from '../../providers/data/data.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent implements OnInit {
-
+    homePageImage : String = "preview/40/abel-y-costa-716024-unsplash__preview.jpg"
     collections$: Observable<any[]>;
     topSellers$: Observable<any[]>;
     topSellersLoaded$: Observable<boolean>;
@@ -44,7 +44,7 @@ export class HomePageComponent implements OnInit {
 
     private getHeroImageUrl(): string {
         const { apiHost, apiPort } = environment;
-        return `url('${apiHost}:${apiPort}/assets/preview/40/abel-y-costa-716024-unsplash__preview.jpg')`;
+        return `url('${apiHost}:${apiPort}/assets/${this.homePageImage}')`;
     }
 
 }
