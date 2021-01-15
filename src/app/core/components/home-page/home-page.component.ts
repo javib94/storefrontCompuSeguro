@@ -14,7 +14,7 @@ import { DataService } from '../../providers/data/data.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent implements OnInit {
-    homePageImage : String = "preview/40/abel-y-costa-716024-unsplash__preview.jpg"
+    homePageImage : String = "source/1c/stockscreen.jpeg"
     collections$: Observable<any[]>;
     topSellers$: Observable<any[]>;
     topSellersLoaded$: Observable<boolean>;
