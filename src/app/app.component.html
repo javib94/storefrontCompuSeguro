@@ -17,6 +17,7 @@
     </vsf-layout-header>
     <vsf-collections-menu-mobile [visible]="mobileNavVisible$ | async"></vsf-collections-menu-mobile>
     <vsf-cart-drawer [visible]="cartDrawerVisible$ | async" (close)="closeCartDrawer()"></vsf-cart-drawer>
+    
     <div class="contents">
         <vsf-home-page *ngIf="isHomePage$ | async; else main"></vsf-home-page>
         <ng-template #main>
