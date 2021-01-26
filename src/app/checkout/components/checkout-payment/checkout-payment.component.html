@@ -16,16 +16,16 @@
     </div>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <label class="input-group-text" for="month">Expiry</label>
+        <label class="input-group-text" for="month">Fecha de expiración</label>
       </div>
       <select class="custom-select" id="month" name="expMonth" [(ngModel)]="expMonth" [required]="true">
-          <option selected [ngValue]="undefined">Month</option>
+          <option selected [ngValue]="undefined">Mes</option>
           <option *ngFor="let month of getMonths()" [ngValue]="month">
               {{ month }}
           </option>
       </select>
       <select class="custom-select" id="year" name="expYear" [(ngModel)]="expYear" [required]="true">
-          <option selected [ngValue]="undefined">Year</option>
+          <option selected [ngValue]="undefined">Año</option>
           <option *ngFor="let year of getYears()" [ngValue]="year">
               {{ year }}
           </option>

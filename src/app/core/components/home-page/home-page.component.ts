@@ -44,7 +44,7 @@ export class HomePageComponent implements OnInit {
 
     private getHeroImageUrl(): string {
         const { apiHost, apiPort } = environment;
-        return `url('${apiHost}:${apiPort}/assets/${this.homePageImage}')`;
+        return `url('${apiHost}:${apiPort}/serverassets/${this.homePageImage}')`;
     }
 
 }

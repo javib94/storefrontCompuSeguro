@@ -1,6 +1,6 @@
 <div *ngIf="order$ | async as order">
     <div class="text-center mb-4">
-        <h2 class="display-4">Thank you for your order!</h2>
+        <h2 class="display-4">¡Gracias por tu compra!</h2>
         <ul class="order-details list-unstyled">
             <li class="lead"><span class="text-muted">Order code:</span> {{ order.code }}</li>
             <li class="lead"><span class="text-muted">Placed:</span> {{ order.updatedAt | date: 'medium' }}</li>
@@ -12,14 +12,14 @@
             <h3>Create an account</h3>
         </div>
         <div class="card-body">
-            <p class="lead">Create an account to enjoy faster checkouts, order tracking, order history and more!</p>
+            <p class="lead">¡Crea una cuenta para disfrutar de compras más rapidas, estado de tu orden, historial de compras y mucho más! </p>
             <button class="btn btn-primary btn-block"
                     (click)="register()"
                     [disabled]="registrationSent">
-                Create account
+                Crear una cuenta
             </button>
             <div *ngIf="registrationSent" class="registration-sent">
-                Great! Now check your email ({{ order.customer.emailAddress }}) to complete registration.
+                ¡Muy bien! Ahora revisa tu correo electrónico ({{ order.customer.emailAddress }}) para completar tu registro.
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ export const environment = {
     shopApiPath: 'shop-api',
     baseHref: '/',
     deployUrl: '/', 
-    tokenMethod: 'bearer',
+    tokenMethod: 'cookie',
 };
 
 /*
