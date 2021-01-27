@@ -21,7 +21,14 @@ export class HomePageComponent implements OnInit {
     heroImage: SafeStyle;
     readonly placeholderProducts = Array.from({ length: 12 }).map(() => null);
     constructor(private dataService: DataService, private sanitizer: DomSanitizer) { }
-
+    images = [
+        {path: 'assets/slides/Slide1.jpg'},
+        {path: 'assets/slides/Slide2.jpg'},
+        {path: 'assets/slides/Slide3.jpg'},
+        {path: 'assets/slides/Slide4.jpg'},
+        {path: 'assets/slides/Slide5.jpg'},
+        {path: 'assets/slides/Slide6.jpg'},
+    ]
     ngOnInit() {
         this.collections$ = this.dataService.query(GET_COLLECTIONS, {
             options: {},
