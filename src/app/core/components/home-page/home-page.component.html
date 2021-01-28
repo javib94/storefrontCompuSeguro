@@ -1,6 +1,18 @@
-    <carousel cellWidth=100% 
-        [images]="images">
+<div class="hero" >
+    <carousel 
+        [images]="images"
+        [objectFit]="'cover'"
+        [cellWidth]="'100%'"
+        [autoplay]="true"
+        [dots]="true" 
+        [loop]="true"
+        [autoplayInterval] = 3000 
+        [height]= 400
+        objectFit="contain"  
+        
+        >
     </carousel>
+</div>
 
 <div class="container">
     <!-- 

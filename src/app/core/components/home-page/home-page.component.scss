@@ -13,7 +13,8 @@ $spacer: 1rem;
     position: relative;
     background-position: bottom;
     min-height: 90vh;
-
+    
+    z-index: 10;
     .logo {
         opacity: 0.8;
         max-width: 100%;
