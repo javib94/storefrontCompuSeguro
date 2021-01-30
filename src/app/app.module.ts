@@ -14,12 +14,14 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
+
 const STATE_KEY = makeStateKey<any>('apollo.state');
 
 @NgModule({
     declarations: [
         AppComponent,
         HomePageComponent,
+       
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),

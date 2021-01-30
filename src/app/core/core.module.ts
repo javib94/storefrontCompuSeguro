@@ -31,6 +31,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductSearchBarComponent } from './components/product-search-bar/product-search-bar.component';
 import { buildIconLibrary } from './icon-library';
 import { DefaultInterceptor } from './providers/data/interceptor';
+import { InformationComponent } from './components/information/information.component';
 
 const CORE_COMPONENTS = [
     ProductListComponent,
@@ -57,11 +58,14 @@ let providedCacheState: any | undefined;
 @NgModule({
     declarations: [
         ...CORE_COMPONENTS,
+        InformationComponent,
+       
     ],
     imports: [
         HttpClientModule,
         SharedModule,
         BrowserModule,
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: DefaultInterceptor, multi: true },
@@ -74,6 +78,7 @@ let providedCacheState: any | undefined;
     ],
     exports: [
         ...CORE_COMPONENTS,
+     
     ],
 })
 export class CoreModule {
