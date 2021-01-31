@@ -16,7 +16,6 @@
     </vsf-layout-header>
     <vsf-collections-menu-mobile [visible]="mobileNavVisible$ | async"></vsf-collections-menu-mobile>
     <vsf-cart-drawer [visible]="cartDrawerVisible$ | async" (close)="closeCartDrawer()"></vsf-cart-drawer>
-    
     <div class="contents">
         <vsf-home-page *ngIf="isHomePage$ | async; else main"></vsf-home-page>
         <ng-template #main>
@@ -26,13 +25,6 @@
 
     <vsf-layout-footer>
         <div class="row text-muted mt-5 mb-5">
-            <div class="col-md-3 text-center text-md-left">
-                <h3>Ordenes</h3>
-                <ul class="list-unstyled">
-                    <li>Envíos</li>
-                    <li>Términos y Condiciones</li>
-                </ul>
-            </div>
             <div class="col-md-3 text-center text-md-left">
                 <h3>Información</h3>
                 <ul class="list-unstyled">
@@ -66,11 +58,29 @@
                     </a></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-md-3 text-center text-md-left">
+                <h3>Ubicación </h3>
+                <ul class="list-unstyled">
+                    <li>10 avenida 13-58 Edificio Duarte Zona 1 Guatemala C.A.</li>
+                </ul>
+                <h3> Teléfonos </h3>
+                <ul class="list-unstyled">
+                    <li>+1 (502) 5999-6545 </li>
+                    <li>+1 (502) 5999-4252</li>
+                    <li>+1 (502) 5999-8626</li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3 text-md-left">
+                <h3>Contáctanos</h3>
                 <div class="social d-flex justify-content-around">
-                    <fa-icon size="2x" [icon]="['fab', 'facebook']"></fa-icon>
+                    <a href="https://www.facebook.com">
+                        <fa-icon class="fbicon" size="4x" [icon]="['fab', 'facebook']"></fa-icon>
+                    </a>
+                    <a href="https://wa.me/50259996545">
+                        <fa-icon class="waicon" size="4x" [icon]="['fab', 'whatsapp']"></fa-icon>
+                    </a>
                 </div>
-                
             </div>
         </div>
         

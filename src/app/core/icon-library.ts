@@ -4,6 +4,7 @@ import {
     faInstagram,
     faTwitter,
     faYoutube,
+    faWhatsapp
 } from '@fortawesome/free-brands-svg-icons';
 import {
     faBars,
@@ -38,5 +39,6 @@ export function buildIconLibrary(library: FaIconLibrary) {
         faSadCry,
         faFilter,
         faBars,
+        faWhatsapp,
     );
 }

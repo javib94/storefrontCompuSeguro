@@ -65,7 +65,6 @@ let providedCacheState: any | undefined;
         HttpClientModule,
         SharedModule,
         BrowserModule,
-
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: DefaultInterceptor, multi: true },

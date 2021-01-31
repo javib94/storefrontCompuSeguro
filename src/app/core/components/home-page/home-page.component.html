@@ -1,15 +1,13 @@
-<div class="hero" >
-    <carousel 
+<div class="car">
+    <carousel class="car"
         [images]="images"
-        [objectFit]="'cover'"
         [cellWidth]="'100%'"
         [autoplay]="true"
         [dots]="true" 
         [loop]="true"
-        [autoplayInterval] = 3000 
-        [height]= 530
-        [objectFit]="'cover'"
-        
+        [autoplayInterval] = 4000 
+        [height]= 400
+        objectFit="contain"
         >
     </carousel>
 </div>
@@ -22,7 +20,7 @@
         </vsf-collection-card>
     </div>
     -->
-    <h3 class="display-4 mt-5">Top Sellers</h3>
+    <h3 class="display-4 mt-5">Lo más vendido</h3>
     <div class="product-list">
         <ng-container *ngIf="topSellersLoaded$ | async; else placeholders">
             <vsf-product-card *ngFor="let product of topSellers$ | async" [product]="product"></vsf-product-card>
@@ -30,5 +28,9 @@
         <ng-template #placeholders>
             <vsf-product-card *ngFor="let product of placeholderProducts" [product]="product"></vsf-product-card>
         </ng-template>
+        
     </div>
+</div>
+<div style="height: 85px;">
+
 </div>

@@ -1,7 +1,9 @@
 @import "variables";
 
 $spacer: 1rem;
-
+.car{
+    z-index: 10;
+}
 .hero {
     display: flex;
     align-items: center;
@@ -12,7 +14,7 @@ $spacer: 1rem;
     background-size: cover;
     position: relative;
     background-position: bottom;
-    min-height: 75vh;
+    min-height: 50vh;
     
     z-index: 10;
     .logo {
