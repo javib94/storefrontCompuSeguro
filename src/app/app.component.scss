@@ -1,26 +1,14 @@
 .header {
     background-color: rgba(255, 228, 106, 0.945);
     border-bottom: 1px solid #e9ecef;
-    position: fixed;
-   
-    z-index: 999;
-    width: 100%;
+
     > .container {
         display: flex;
         align-items: center;
         padding: 6px;
     }
 }
-.pagetitle {
-    font-size: 250%;
-    font-family: Noto Sans, sans-serif;
-    font-weight: bold
-}
-.contents{
-    overflow: scroll;  
-    position: relative;        
-    top: 150px;
-}
+
 .logo-link {
     display: flex;
     align-items: center;
@@ -30,10 +18,11 @@
     }
 
     &:link, &:visited {
-        color: #0fb1ecf6;
+        color: #0e95c7;
         font-size: 22px;
     }
 }
+
 .waicon{
     color:rgb(79, 221, 60);
 }
