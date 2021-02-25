@@ -2,7 +2,8 @@
     <vsf-layout-header>
         <div class="header">
             <div class="container">
-                <vsf-mobile-menu-toggle></vsf-mobile-menu-toggle>
+            <!--    <vsf-mobile-menu-toggle></vsf-mobile-menu-toggle> -->
+
                 <a [routerLink]="['/']" class="logo-link d-none d-md-inline-block ">
                     <img src="assets/icons/icon-144x144.png" class="logo" alt="Vendure Storefront">
                 </a>
@@ -11,7 +12,10 @@
                 <vsf-account-link class="mr-2"></vsf-account-link>
                 <vsf-cart-toggle (toggle)="openCartDrawer()"></vsf-cart-toggle>
             </div>
-            <vsf-collections-menu></vsf-collections-menu>
+            <vsf-alternative-menu></vsf-alternative-menu>
+            
+        
+            <!--  vsf-collections-menu></vsf-collections-menu> -->
         </div>
     </vsf-layout-header>
     <vsf-collections-menu-mobile [visible]="mobileNavVisible$ | async"></vsf-collections-menu-mobile>
@@ -29,31 +33,31 @@
                 <h3>Información</h3>
                 <ul class="list-unstyled">
                     
-                    <li ><a href = "https://www.compus4less.com/information#quienes-somos">
+                    <li ><a href = "/information#quienes-somos">
                         Nosotros
                     </a></li>
 
-                    <li ><a href = "https://www.compus4less.com/information#ubicacion">
+                    <li ><a href = "/information#ubicacion">
                         Ubicación
                     </a></li>
 
-                    <li ><a href = "https://www.compus4less.com/information#envio">
+                    <li ><a href = "/information#envio">
                         Acerca del envío
                     </a></li>
 
-                    <li ><a href = "https://www.compus4less.com/information#pago">
+                    <li ><a href = "/information#pago">
                         Formas de Pago
                     </a></li>
 
-                    <li ><a href = "https://www.compus4less.com/information#asesoria">
+                    <li ><a href = "/information#asesoria">
                         Asesoría
                     </a></li>
 
-                    <li ><a href = "https://www.compus4less.com/information#garantia">
+                    <li ><a href = "/information#garantia">
                         Garantía y Soporte Técnico
                     </a></li>
 
-                    <li ><a href = "https://www.compus4less.com/information#seguridad">
+                    <li ><a href = "/information#seguridad">
                         Seguridad
                     </a></li>
                 </ul>
@@ -71,7 +75,7 @@
                 </ul>
             </div>
             
-            <div class="col-md-3 text-md-left">
+            <div class="col-md-3 text-md-left" id="contact">
                 <h3>Contáctanos</h3>
                 <div class="social d-flex justify-content-around">
                     <a href="https://www.facebook.com">
