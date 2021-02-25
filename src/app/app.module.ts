@@ -13,6 +13,8 @@ import { HomePageComponent } from './core/components/home-page/home-page.compone
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const STATE_KEY = makeStateKey<any>('apollo.state');
@@ -34,6 +36,8 @@ const STATE_KEY = makeStateKey<any>('apollo.state');
             registrationStrategy: 'registerWithDelay:5000',
         }),
         IvyCarouselModule,
+        MDBBootstrapModule.forRoot(),
+        BrowserAnimationsModule,
     ],
     bootstrap: [AppComponent],
 })

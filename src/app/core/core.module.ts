@@ -32,6 +32,8 @@ import { ProductSearchBarComponent } from './components/product-search-bar/produ
 import { buildIconLibrary } from './icon-library';
 import { DefaultInterceptor } from './providers/data/interceptor';
 import { InformationComponent } from './components/information/information.component';
+import { AlternativeMenuComponent } from './components/alternative-menu/alternative-menu.component';
+import { MDBBootstrapModule,  NavbarModule, WavesModule, ButtonsModule} from 'angular-bootstrap-md';
 
 const CORE_COMPONENTS = [
     ProductListComponent,
@@ -50,6 +52,8 @@ const CORE_COMPONENTS = [
     ProductListControlsComponent,
     ProductSearchBarComponent,
     AssetGalleryComponent,
+    InformationComponent,
+    AlternativeMenuComponent,
 ];
 
 let apolloCache: InMemoryCache;
@@ -58,13 +62,16 @@ let providedCacheState: any | undefined;
 @NgModule({
     declarations: [
         ...CORE_COMPONENTS,
-        InformationComponent,
        
     ],
     imports: [
         HttpClientModule,
         SharedModule,
         BrowserModule,
+        MDBBootstrapModule.forRoot(),
+        NavbarModule, 
+        WavesModule, 
+        ButtonsModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: DefaultInterceptor, multi: true },
@@ -77,7 +84,6 @@ let providedCacheState: any | undefined;
     ],
     exports: [
         ...CORE_COMPONENTS,
-     
     ],
 })
 export class CoreModule {

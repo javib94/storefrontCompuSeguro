@@ -5,9 +5,10 @@
         [autoplay]="true"
         [dots]="true" 
         [loop]="true"
-        [autoplayInterval] = 5500 
+        [autoplayInterval] = 3000 
         [height]= 400
         objectFit="contain"
+
         >
     </carousel>
 </div>
@@ -27,7 +28,6 @@
         </ng-container>
         <ng-template #placeholders>
             <vsf-product-card *ngFor="let product of placeholderProducts" [product]="product"></vsf-product-card>
-        </ng-template>
-        
+        </ng-template>  
     </div>
 </div>
