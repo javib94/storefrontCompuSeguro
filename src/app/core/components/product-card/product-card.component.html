@@ -9,7 +9,7 @@
             </a>
             <div class="price">
                 <ng-template [ngIf]="product.priceWithTax.min === product.priceWithTax.max" [ngIfElse]="range">
-                    {{ product.priceWithTax.min | formatPrice }}
+                    Q {{ product.priceWithTax.min | formatPrice }}
                 </ng-template>
                 <ng-template #range>
                   Desde {{ product.priceWithTax.min | formatPrice }}
