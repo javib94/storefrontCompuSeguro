@@ -23,7 +23,7 @@
                             {{ selectedVariant?.sku }}
                         </div>
                         <div class="price">
-                            {{ selectedVariant?.priceWithTax | formatPrice }}
+                          Q  {{ selectedVariant?.priceWithTax | formatPrice }}
                         </div>
                         <div class="qty mr-md-2 ml-2">
                             <input type="number" min="0" max="99" placeholder="Qty" [(ngModel)]="qty"

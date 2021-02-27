@@ -17,4 +17,7 @@ export class AlternativeMenuComponent implements OnInit {
   goToLink(url: string){
     window.open(url, "_blank");
   }
+  goToBottom(){
+    window.scrollTo(0,document.body.scrollHeight);
+}
 }
