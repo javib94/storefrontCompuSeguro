@@ -10,7 +10,7 @@ export class MessageService {
 
   sendMessage(body: object) {
     
-    return this._http.post('http://www.compus4less.com/formulario', body, {responseType: 'text'});
+    return this._http.post('https://www.compus4less.com/formulario', body, {responseType: 'text'});
   }
 
 }
