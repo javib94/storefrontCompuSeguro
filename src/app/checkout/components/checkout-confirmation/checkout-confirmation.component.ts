@@ -53,8 +53,8 @@ export class CheckoutConfirmationComponent implements OnInit {
                 const customer = order?.customer;
                 if (customer) {
                     return this.dataService.mutate<Register.Mutation, Register.Variables>(REGISTER, {
-                        input: {
-                            emailAddress: customer.emailAddress,
+                        input: {    
+                            emailAddress: customer.emailAddress, 
                             firstName: customer.firstName,
                             lastName: customer.lastName,
                         },

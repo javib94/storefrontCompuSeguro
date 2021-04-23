@@ -3,6 +3,7 @@ import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { StateService } from './core/providers/state/state.service';
+ 
 
 @Component({
     selector: 'sf-root',
@@ -13,9 +14,9 @@ export class AppComponent implements OnInit {
     cartDrawerVisible$: Observable<boolean>;
     mobileNavVisible$: Observable<boolean>;
     isHomePage$: Observable<boolean>;
-
     constructor(private router: Router,
-                private stateService: StateService) {
+                private stateService: StateService,
+                ) {
     }
 
     ngOnInit(): void {
@@ -33,6 +34,12 @@ export class AppComponent implements OnInit {
 
     closeCartDrawer() {
         this.stateService.setState('cartDrawerOpen', false);
-    }
-
+    }/*
+     contactForm(form) {
+       this._MessageService.sendMessage(form).subscribe(() => {
+            Swal.fire('Thank you...', 'You submitte
+            
+            d succesfully!', 'success')  
+        });
+    }*/
 }
