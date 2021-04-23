@@ -19,5 +19,5 @@ export class AlternativeMenuComponent implements OnInit {
   }
   goToBottom(){
     window.scrollTo(0,document.body.scrollHeight);
-}
+  }
 }

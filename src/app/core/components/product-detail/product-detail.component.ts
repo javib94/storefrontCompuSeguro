@@ -59,6 +59,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
             const collection = this.getMostRelevantCollection(product.collections, lastCollectionSlug);
             this.breadcrumbs = collection ? collection.breadcrumbs : [];
         });
+        this.goToInit();
     }
 
     ngOnDestroy() {
@@ -103,6 +104,9 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         this.stateService.setState('cartDrawerOpen', true);
         closeFn();
     }
+    goToInit(){
+        window.scrollTo(0,0);
+      }
 
     /**
      * If there is a collection matching the `lastCollectionId`, return that. Otherwise return the collection

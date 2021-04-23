@@ -34,7 +34,9 @@ import { DefaultInterceptor } from './providers/data/interceptor';
 import { InformationComponent } from './components/information/information.component';
 import { AlternativeMenuComponent } from './components/alternative-menu/alternative-menu.component';
 import { MDBBootstrapModule,  NavbarModule, WavesModule, ButtonsModule} from 'angular-bootstrap-md';
-
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { FormsModule }   from '@angular/forms';
+import { MessageService } from '../services/message.service';
 const CORE_COMPONENTS = [
     ProductListComponent,
     ProductDetailComponent,
@@ -54,6 +56,7 @@ const CORE_COMPONENTS = [
     AssetGalleryComponent,
     InformationComponent,
     AlternativeMenuComponent,
+    FormularioComponent,
 ];
 
 let apolloCache: InMemoryCache;
@@ -61,8 +64,7 @@ let providedCacheState: any | undefined;
 
 @NgModule({
     declarations: [
-        ...CORE_COMPONENTS,
-       
+        ...CORE_COMPONENTS, 
     ],
     imports: [
         HttpClientModule,
@@ -71,7 +73,8 @@ let providedCacheState: any | undefined;
         MDBBootstrapModule.forRoot(),
         NavbarModule, 
         WavesModule, 
-        ButtonsModule
+        ButtonsModule,
+        FormsModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: DefaultInterceptor, multi: true },
@@ -81,6 +84,7 @@ let providedCacheState: any | undefined;
             useFactory: apolloOptionsFactory,
             deps: [HttpLink, PLATFORM_ID],
         },
+        MessageService
     ],
     exports: [
         ...CORE_COMPONENTS,
