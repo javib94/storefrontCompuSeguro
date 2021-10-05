@@ -1,6 +1,15 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="alert alert-danger" role="alert" *ngIf="paymentErrorMessage">
     {{ paymentErrorMessage }}
 </div>
+
+<div class="w3-panel w3-pale-yellow w3-border">
+    <h3>¡Aviso!</h3>
+    <p>Estamos trabajando para recibir tus pagos con tarjeta, nos comunicaremos contigo para terminar la compra. Puedes dejar este apartado en blanco. </p>
+</div>
+  
+
+
 <form class="payment-form mb-5" #paymentForm="ngForm" (submit)="completeOrder()">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -32,6 +41,6 @@
       </select>
     </div>
 
-    <button class="btn btn-primary btn-lg"
-            [disabled]="paymentForm.pristine || paymentForm.invalid">Complete order</button>
+    <button class="btn btn-primary btn-lg">Completar Orden</button>
+    <!--     [disabled]="paymentForm.pristine || paymentForm.invalid" #ESTO VA DENTRO  BUTTON-->
 </form>

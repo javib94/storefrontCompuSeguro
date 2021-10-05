@@ -87,7 +87,7 @@ export class CheckoutShippingComponent implements OnInit {
     createAddress() {
         this.modalService.fromComponent(AddressModalComponent, {
             locals: {
-                title: 'Create new address',
+                title: 'Crear nueva direccion',
             },
             closable: true,
         }).pipe(
