@@ -32,6 +32,7 @@ export const GET_ELIGIBLE_SHIPPING_METHODS = gql`
     query GetEligibleShippingMethods {
         eligibleShippingMethods {
             id
+            name
             description
             price
             metadata

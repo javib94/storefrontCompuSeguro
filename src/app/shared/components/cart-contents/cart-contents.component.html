@@ -43,11 +43,11 @@
     </div>
     <div class="shipping">
         <div class="shipping-price">
-            <span>Shipping:</span>
+            <span>Método de Envío:</span>
             <span>{{ cart.shipping | formatPrice }}</span>
         </div>
         <div class="shipping-method">
-            {{ cart.shippingMethod?.description }}
+            {{ cart.shippingMethod?.name }}
         </div>
     </div>
     <div class="totals">

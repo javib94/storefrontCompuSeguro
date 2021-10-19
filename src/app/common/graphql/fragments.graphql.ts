@@ -48,6 +48,7 @@ export const CART_FRAGMENT = gql`
         shippingMethod {
             id
             code
+            name
             description
         }
         total

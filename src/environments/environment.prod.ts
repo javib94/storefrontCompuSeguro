@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    apiHost: 'https://www.compus4less.com',
+    apiHost: 'https://www.compuseguro.net',
     apiPort: 443,
     shopApiPath: 'shop-api',
     baseHref: '/',
