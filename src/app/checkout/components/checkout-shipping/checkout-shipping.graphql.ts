@@ -19,13 +19,17 @@ export const SET_SHIPPING_ADDRESS = gql`
     mutation SetShippingAddress($input: CreateAddressInput!) {
         setOrderShippingAddress(input: $input) {
             ...Cart
-            shippingAddress {
-                ...OrderAddress
+            ...on Order {
+                shippingAddress {
+                    ...OrderAddress
+                }
             }
+            ...ErrorResult
         }
     }
     ${CART_FRAGMENT}
     ${ORDER_ADDRESS_FRAGMENT}
+    ${ERROR_RESULT_FRAGMENT}
 `;
 
 export const GET_ELIGIBLE_SHIPPING_METHODS = gql`
@@ -35,6 +39,7 @@ export const GET_ELIGIBLE_SHIPPING_METHODS = gql`
             name
             description
             price
+            priceWithTax
             metadata
         }
     }
