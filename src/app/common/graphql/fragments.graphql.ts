@@ -29,7 +29,6 @@ export const CART_FRAGMENT = gql`
             unitPrice
             unitPriceWithTax
             quantity
-            quantity
             linePriceWithTax
             discountedLinePriceWithTax
             productVariant {
@@ -38,6 +37,7 @@ export const CART_FRAGMENT = gql`
             }
             discounts {
                 amount
+                amountWithTax
                 description
                 adjustmentSource
                 type
@@ -61,6 +61,7 @@ export const CART_FRAGMENT = gql`
         }
         discounts {
             amount
+            amountWithTax
             description
             adjustmentSource
             type

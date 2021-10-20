@@ -13,6 +13,7 @@ const result: PossibleTypesResultData = {
       "FloatCustomFieldConfig",
       "IntCustomFieldConfig",
       "LocaleStringCustomFieldConfig",
+      "RelationCustomFieldConfig",
       "StringCustomFieldConfig"
     ],
     "ErrorResult": [
@@ -23,6 +24,7 @@ const result: PossibleTypesResultData = {
       "EmailAddressConflictError",
       "IdentifierChangeTokenExpiredError",
       "IdentifierChangeTokenInvalidError",
+      "IneligiblePaymentMethodError",
       "IneligibleShippingMethodError",
       "InsufficientStockError",
       "InvalidCredentialsError",
@@ -69,6 +71,7 @@ const result: PossibleTypesResultData = {
       "Role",
       "ShippingMethod",
       "Surcharge",
+      "Tag",
       "TaxCategory",
       "TaxRate",
       "User",
@@ -87,6 +90,7 @@ const result: PossibleTypesResultData = {
       "PromotionList",
       "RoleList",
       "ShippingMethodList",
+      "TagList",
       "TaxRateList"
     ],
     "ActiveOrderResult": [
@@ -94,6 +98,7 @@ const result: PossibleTypesResultData = {
       "Order"
     ],
     "AddPaymentToOrderResult": [
+      "IneligiblePaymentMethodError",
       "NoActiveOrderError",
       "Order",
       "OrderPaymentStateError",
@@ -118,6 +123,7 @@ const result: PossibleTypesResultData = {
       "FloatCustomFieldConfig",
       "IntCustomFieldConfig",
       "LocaleStringCustomFieldConfig",
+      "RelationCustomFieldConfig",
       "StringCustomFieldConfig"
     ],
     "NativeAuthenticationResult": [
