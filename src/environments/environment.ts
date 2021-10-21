@@ -10,6 +10,7 @@ export const environment = {
     baseHref: '/',
     deployUrl: '/', 
     tokenMethod: 'cookie',
+  //  channelToken: 'hd4invj2w9qq78ceknn'
 };
 
 /*
