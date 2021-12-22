@@ -10,7 +10,9 @@ export class MessageService {
 
   sendMessage(body: object) {
     
-    return this._http.post('https://www.compus4less.com/formulario', body, {responseType: 'text'});
+    return this._http.post('https://www.compuseguro.net/formulario', body, {responseType: 'text'});
   }
-
+  getBannerImages(){
+    return this._http.get('https://www.compuseguro.net/banner');  
+  }
 }
